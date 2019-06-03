@@ -1,0 +1,1885 @@
+@import "../../assets/css/common";
+.container,.chatContent {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.chatContent{
+  padding: 0 0 1.2rem;
+  box-sizing: border-box;
+  margin-top: 0;
+}
+.chatnav{
+  height: 0.8rem;
+  background: $baseBlue;
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: 55;
+}
+.chatnav b{
+  width: 0.68rem;
+  text-align: center;
+  display: inline-block;
+  background: url(../.././assets/media/img/nav-back_icon.png) no-repeat left .2rem center;
+  background-size: .2rem .34rem;
+}
+.chatnav .sele{
+  margin-left: 0.2rem;
+  width: 6.62rem;
+  height:0.8rem;
+  display:flex;
+}
+.chatnav a{
+  display: inline-block;
+  font-size: 0.32rem;
+  color: #95c6ff;
+  line-height: 0.8rem;
+  width: 1.4rem;
+  margin-right:0.87rem;
+}
+.sele .chat{
+  color:#fff;
+  position: relative;
+}
+.sele .chat p{
+  border: 0.12rem solid #fff;
+  border-left: 0.12rem solid transparent ;
+  border-right: 0.12rem solid transparent ;
+  border-top: 0.12rem solid transparent ;
+  position: absolute;
+  bottom:0;
+  left: 0.58rem;
+}
+.container .header {
+  background: $baseBlue;
+  height: 1.05rem;
+  color: #fff;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+
+.container span {
+  display: inline-block
+}
+
+.container .chatTime {
+  display: block;
+  text-align: center;
+  line-height: .4rem;
+  height: .4rem;
+  margin: .38rem auto .2rem;
+  font-size: .25rem
+}
+
+.container .chatTime span {
+  display: inline-block;
+  max-width: 50%;
+  background: #d2d2d2;
+  color: #fff;
+  padding: 0 .2rem;
+  -webkit-border-radius: .15rem;
+  -khtml-border-radius: .15rem;
+  -moz-border-radius: .15rem;
+  -ms-border-radius: .15rem;
+  -o-border-radius: .15rem;
+  border-radius: .15rem
+}
+
+.container .header .headImg {
+  display: inline-block;
+  width: .72rem;
+  height: .72rem;
+  margin: 0 .26rem;
+  border: 1px solid #fff;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%
+}
+
+.container .header .name {
+  font-size: .32rem;
+  margin-right: .8rem
+}
+
+.container .header .type {
+  width: .85rem;
+  text-align: center;
+  font-size: .28rem;
+  height: .4rem;
+  line-height: .4rem;
+  margin: 0 .44rem;
+  border: 1px solid #fff;
+  -webkit-border-radius: .17rem;
+  -khtml-border-radius: .17rem;
+  -moz-border-radius: .17rem;
+  -ms-border-radius: .17rem;
+  -o-border-radius: .17rem;
+  border-radius: .17rem
+}
+
+.container .header .age {
+  font-size: .26rem;
+  margin-right: .26rem
+}
+
+.container .header .age-info {
+  font-size: .26rem;
+  margin-right: .25rem
+}
+
+.container .header .sex {
+  font-size: .26rem;
+  padding: 0 .26rem 0 .25rem;
+  border-left: 1px solid #fff
+}
+
+.container .header .sex-info {
+  font-size: .26rem
+}
+
+.container .header .arrow {
+  background: url(../../assets/media/img/arrowRight.png) no-repeat;
+  background-size: 0.10rem 0.18rem;
+  background-size: contain;
+  width: .18rem;
+  height: .29rem;
+  position: absolute;
+  right: .38rem;
+  top: 50%;
+  margin-top: -0.15rem
+}
+
+.container .content {
+  padding: 0 .2rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  // margin-top: 0.8rem;
+  overflow: hidden;
+}
+.container .chatWrap{
+  padding-top: 0.01rem;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.container .footer {
+  width: 100%;
+  position: absolute;
+  min-height: 1.2rem;
+  bottom: 0;
+  left:0;
+}
+
+.container .footer-fn {
+  width: 100%;
+  height: 1.2rem;
+  background: #fff;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .footer-fn .text {
+  width: 4.2rem;
+  font-size: .4rem;
+  height: .8rem;
+  line-height: .8rem;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  -webkit-border-radius: .12rem;
+  -khtml-border-radius: .12rem;
+  -moz-border-radius: .12rem;
+  -ms-border-radius: .12rem;
+  -o-border-radius: .12rem;
+  border-radius: .12rem;
+  word-break: break-all;
+  vertical-align: bottom;
+  outline: 0;
+  position: relative;
+  overflow: scroll;
+}
+
+.container .footer-fn .text-active {
+  display: inline-block;
+  visibility: visible
+}
+
+.container .footer-fn .send {
+  width: 1.27rem;
+  height: .6rem;
+  background: $iconGray;
+  color: #fff;
+  text-align: center;
+  font-size: .3rem;
+  line-height: .6rem;
+  -webkit-border-radius: .12rem;
+  -khtml-border-radius: .12rem;
+  -moz-border-radius: .12rem;
+  -ms-border-radius: .12rem;
+  -o-border-radius: .12rem;
+  border-radius: .12rem;
+  margin-right: .28rem
+}
+.container .footer-fn .send-active{
+  background: $baseBlue;
+}
+.container .footer-fn .icon_sound {
+  display: inline-block;
+}
+
+.container .footer-fn .icon_keyword {
+  background: url(../../assets/media/img/chat-keyword.png) center no-repeat;
+  background-size: .52rem .52rem
+}
+
+.container .footer-fn .icon_more {
+  display: inline-block;
+}
+
+.container .content .test-data, .container .footer-fn .voice-tip {
+  background: #fff;
+  -webkit-border-radius: .12rem;
+  -moz-border-radius: .12rem;
+  -ms-border-radius: .12rem;
+  -o-border-radius: .12rem
+}
+
+.container .footer-fn .voice-tip {
+  width: 4.2rem;
+  height: .8rem;
+  line-height: .8rem;
+  -khtml-border-radius: .12rem;
+  text-align: center;
+  position: absolute;
+  left: .98rem;
+  top: .2rem;
+  border: 1px solid #bfbfbf;
+  font-size: .28rem
+}
+
+.container .footer-fn .voice-tip_active {
+  display: block
+}
+
+.container .content .test-data {
+  display: inline-block;
+  width: 4.65rem;
+  height: 2.25rem;
+  box-sizing: border-box;
+  -khtml-border-radius: .12rem;
+  border-radius: .12rem;
+  position: relative
+}
+
+.container .content .test-data span {
+  display: inline-block
+}
+
+.container .content .test-data .title {
+  font-size: .3rem;
+  width: 2.7rem
+}
+
+.container .content .test-data .intro {
+  font-size: .24rem;
+  color: #7a7a7a;
+  margin-top: .15rem;
+  line-height: .35rem;
+  width: 2.7rem
+}
+
+.container .content .test-data .test-btn {
+  position: absolute;
+  width: 1.2rem;
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  font-size: .24rem;
+  -webkit-border-radius: .12rem;
+  -khtml-border-radius: .12rem;
+  -moz-border-radius: .12rem;
+  -ms-border-radius: .12rem;
+  -o-border-radius: .12rem;
+  border-radius: .12rem
+}
+
+.container .content .test-data .doc-child-test_btn {
+  bottom: .3rem;
+  right: .4rem;
+  color: $baseBlue;
+  border: 1px solid $baseBlue
+}
+
+.container .content .test-data .doc-ACT-test_btn {
+  bottom: .3rem;
+  right: .4rem;
+  color: #0389fb;
+  border: 1px solid #0389fb
+}
+
+.container .content .test-data .doc-TRACT-test_btn {
+  bottom: .3rem;
+  right: .4rem;
+  color: #fbac02;
+  border: 1px solid #fbac02
+}
+
+.container .content .test-data .doc-CACT-test_btn {
+  bottom: .3rem;
+  right: .4rem;
+  color: #fe79b4;
+  border: 1px solid #fe79b4
+}
+
+.container .content .doc-child-test {
+  text-align: left;
+  padding: .3rem .4rem .3rem .2rem;
+  background: url(../../assets/media/img/chat-child_test_icon.png) right .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .doc-ACT-test {
+  text-align: left;
+  padding: .3rem .4rem .3rem .2rem;
+  background: url(../../assets/media/img/chat-ACT_test_icon.png) right .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .doc-TRACT-test {
+  text-align: left;
+  padding: .3rem .4rem .3rem .2rem;
+  background: url(../../assets/media/img/chat-TRACK_test_icon.png) right .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .doc-CACT-test {
+  text-align: left;
+  padding: .3rem .4rem .3rem .2rem;
+  background: url(../../assets/media/img/chat-CACT_test_icon.png) right .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .test-data .pat-child-test_btn {
+  bottom: .3rem;
+  left: .4rem;
+  color: #24dcbc;
+  border: 1px solid #24dcbc
+}
+
+.container .content .test-data .pat-ACT-test_btn {
+  bottom: .3rem;
+  left: .4rem;
+  color: $baseBlue;
+  border: 1px solid $baseBlue
+}
+
+.container .content .test-data .pat-TRACT-test_btn {
+  bottom: .3rem;
+  left: .4rem;
+  color: #fbac02;
+  border: 1px solid #fbac02
+}
+
+.container .content .test-data .pat-CACT-test_btn {
+  bottom: .3rem;
+  left: .4rem;
+  color: #fe79b4;
+  border: 1px solid #fe79b4
+}
+
+.container .content .doc-child-test .triangle, .container .content .doc-test-triangle, .container .content .pat-test-triangle {
+  display: inline-block;
+  position: absolute;
+  border-right: .1rem solid transparent;
+  border-left: .1rem solid #fff;
+  top: .32rem;
+  border-bottom: .09rem solid transparent;
+  border-top: .09rem solid transparent
+}
+
+.container .content .pat-child-test {
+  text-align: right;
+  padding: .3rem .2rem .3rem .4rem;
+  background: url(../../assets/media/img/chat-child_test_icon.png) left .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .pat-ACT-test .intro, .container .content .pat-ACT-test .title, .container .content .pat-CACT-test .intro, .container .content .pat-CACT-test .title, .container .content .pat-TRACT-test .intro, .container .content .pat-TRACT-test .title, .container .content .pat-child-test .intro, .container .content .pat-child-test .title {
+  text-align: left
+}
+
+.container .content .pat-ACT-test {
+  text-align: right;
+  padding: .3rem .2rem .3rem .4rem;
+  background: url(../../assets/media/img/chat-ACT_test_icon.png) left .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .pat-TRACT-test {
+  text-align: right;
+  padding: .3rem .2rem .3rem .4rem;
+  background: url(../../assets/media/img/chat-TRACK_test_icon.png) left .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .pat-CACT-test {
+  text-align: right;
+  padding: .3rem .2rem .3rem .4rem;
+  background: url(../../assets/media/img/chat-CACT_test_icon.png) left .4rem top .3rem no-repeat #fff;
+  background-size: 1.01rem 1.01rem;
+}
+
+.container .content .doc-child-test .triangle, .container .content .doc-test-triangle {
+  right: -0.19rem
+}
+
+.container .content .pat-test-triangle {
+  left: -0.19rem
+}
+
+.container .voice-tips {
+  width: 2.79rem;
+  height: 2.76rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  margin-left: -1.38rem;
+  margin-top: -1.38rem;
+  background-size: contain;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.76rem;
+  -webkit-border-radius: .2rem;
+  -khtml-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+}
+
+.container .voice-tips_cancle {
+  background: url(../../assets/media/img/sendVoice-cancle.png) no-repeat;
+  background-size: 2.79rem 2.76rem;
+}
+
+.container .voice-tips_top {
+  background: url(../../assets/media/img/sendVoice-top.png) no-repeat;
+  background-size: 2.79rem 2.76rem;
+}
+
+.container .voice-tips_warning {
+  background: url(../../assets/media/img/sendVoice.png) no-repeat;
+  background-size: 2.79rem 2.76rem;
+}
+
+.container .voice-tips_text {
+  background: rgba(0, 0, 0, .5)
+}
+
+.container .content .patient {
+  margin-top: .2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  line-height: 0;
+}
+//加载更多
+.container .content .loadMore{
+  width: 100%;
+  height: 0.5rem;
+  display: block;
+  padding-left: 30%;
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  box-sizing: border-box;
+  .tip{
+    line-height: 0.5rem;
+    vertical-align: top;
+    padding-left: 0.2rem;
+  }
+  .loading{
+    position: relative;
+    display: inline-block;
+    @include loading(0.5rem,0.5rem,0.4rem,0.4rem,0.1rem,$fGray,$bg);
+  }
+}
+.container .content .doctor {
+  margin-top: .2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  line-height: 0;
+  position: relative;
+}
+
+.container .content .doctor .doc-img, .container .content .patient .patient-img {
+  width: .75rem;
+  height: .75rem;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%
+}
+
+.container .content .doctor .doc-img {
+  margin-left: .2rem
+}
+
+.container .content .patient .patient-img {
+  margin-right: .2rem
+}
+
+.container .content .doctor .doc-text, .container .content .patient .patient-text {
+  display: inline-block;
+  line-height: .4rem;
+  max-width: 4.76rem;
+  min-height: .4rem;
+  word-break: break-all;
+  padding: .2rem .24rem .2rem .2rem;
+  -webkit-filter:drop-shadow(0 0  1px  #dcdcdc);
+  filter: drop-shadow(0 0  1px  #dcdcdc);
+  //border: 1px solid #dcdcdc;
+  border-radius: .1rem;
+  font-size: .28rem;
+  position: relative;
+  text-align: left;
+}
+
+.container .content .doctor .doc-text {
+  background: $baseBlue;
+  color: #fff
+}
+
+.container .content .patient .patient-text {
+  background: #fff;
+  color: #787878
+}
+
+.container .content .patient .patient-text .triangle {
+  display: inline-block;
+  position: absolute;
+  border-bottom: .09rem solid transparent;
+  border-left: .1rem solid transparent;
+  border-top: .09rem solid transparent;
+  border-right: .1rem solid #fff;
+  left: -0.19rem;
+  top: .32rem
+}
+
+.container .content .chat-info .triangle, .container .content .doctor .doc-text .triangle {
+  border-bottom: .09rem solid transparent;
+  border-right: .1rem solid transparent;
+  border-top: .09rem solid transparent;
+  border-left: .1rem solid $baseBlue;
+  right: -0.19rem;
+  display: inline-block;
+  top: .32rem
+}
+
+.container .content .doctor .doc-text .triangle {
+  position: absolute
+}
+
+.container .content .doctor .doc-text-img, .container .content .patient .patient-text-img {
+  display: inline-block;
+  max-width: 3rem;
+  max-height: 4rem;
+  position: relative
+}
+
+.container .content .doctor .doc-text-img img, .container .content .patient .patient-text-img img {
+  display: inline-block;
+  max-width: 3rem;
+  max-height: 4rem;
+}
+
+.container .content .chat-info {
+  display: inline-block;
+  background: $baseBlue;
+  border-radius: .1rem;
+  position: relative;
+  text-align: right;
+  .text-process{
+    left: -1rem;
+  }
+}
+
+.container .content .chat-info .triangle {
+  position: absolute
+}
+
+.container .content .voice-time {
+  line-height: .8rem;
+  width: .48rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: .24rem;
+  color: #9f9fa0;
+  position: absolute;
+  left: -0.40rem;
+  z-index: 57;
+}
+
+.container .content .voice-bg {
+  display: inline-block;
+  margin: .2rem;
+  width: .3rem;
+  height: .4rem;
+  background: url(../../assets/media/img/voice-left.png) right no-repeat;
+  background-size: cover;
+}
+
+.container .content .patient-chat_chart {
+  display: inline-block;
+  width: 3.2rem;
+  height: 1.2rem;
+  -webkit-filter:drop-shadow(0 0  1px  #dcdcdc);
+  filter: drop-shadow(0 0  1px  #dcdcdc);
+  -webkit-border-radius: .16rem;
+  -khtml-border-radius: .16rem;
+  -moz-border-radius: .16rem;
+  -ms-border-radius: .16rem;
+  -o-border-radius: .16rem;
+  border-radius: .16rem;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding-left: 0.1rem;
+}
+
+.container .content .patient-chat_chart .triangle {
+  display: inline-block;
+  position: absolute;
+  border-bottom: .09rem solid transparent;
+  border-left: .1rem solid transparent;
+  border-top: .09rem solid transparent;
+  border-right: .1rem solid #fff;
+  left: -0.19rem;
+  top: .32rem
+}
+
+.container .content .patient-chart_info {
+  display: inline-block;
+  height: .7rem;
+  width: 1.9rem;
+  border-right: 1px solid #c9caca;
+  margin-top: .25rem;
+  vertical-align: middle;
+}
+
+.container .content .patient-chart_info span {
+  display: block;
+  text-align: right;
+  padding-right: .2rem;
+  line-height: .35rem
+}
+
+.container .content .patient-chart_info .name {
+  font-size: .26rem
+}
+
+.container .content .patient-chart_info .type {
+  font-size: .22rem;
+  color: #909090
+}
+
+.container .content .patient-chat_chart .patient-chart_icon {
+  display: inline-block;
+  width: 1rem;
+  height: .77rem;
+  background: url(../../assets/media/img/chat-chart_icon.png) center no-repeat;
+  background-size: 0.79rem 0.77rem;
+  vertical-align: middle;
+  margin-top: .21rem
+}
+
+.container .content .firstInquiryInfo {
+  margin-top: .5rem
+}
+
+.container .content .patient .pat-firstInquiry_info {
+  display: inline-block;
+  width: 4.8rem;
+  height: 3.35rem;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: .16rem;
+  -khtml-border-radius: .16rem;
+  -moz-border-radius: .16rem;
+  -ms-border-radius: .16rem;
+  -o-border-radius: .16rem;
+  border-radius: .16rem;
+  background: #fff;
+  position: relative;
+  padding: .1rem .25rem 0
+}
+
+.container .content .patient .pat-firstInquiry_info .triangle {
+  display: inline-block;
+  position: absolute;
+  border-bottom: .09rem solid transparent;
+  border-left: .1rem solid transparent;
+  border-top: .09rem solid transparent;
+  border-right: .1rem solid #fff;
+  left: -0.19rem;
+  top: .32rem
+}
+
+.container .content .patient .pat-firstInquiry_info .text {
+  color: #a7a7a7;
+  font-size: .24rem;
+  height: .68rem;
+  line-height: .34rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.container .content .patient .pat-firstInquiry_info .title {
+  font-size: .3rem;
+  margin-top: .16rem;
+  margin-bottom: .05rem
+}
+
+.container .content .patient .pat-firstInquiry_info a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: .6rem;
+  color: $baseBlue;
+  font-size: .28rem;
+  line-height: .6rem;
+  border-top: 1px solid #c9c9c9;
+  margin-top: .25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+
+@keyframes ani {
+  0%, 29% {
+    width: .09rem;
+    height: .4rem
+  }
+  30%, 59% {
+    width: .18rem;
+    height: .4rem
+  }
+  100%, 60% {
+    width: .3rem;
+    height: .4rem
+  }
+}
+
+@-webkit-keyframes ani {
+  0%, 29% {
+    width: .09rem;
+    height: .4rem
+  }
+  30%, 59% {
+    width: .18rem;
+    height: .4rem
+  }
+  100%, 60% {
+    width: .3rem;
+    height: .4rem
+  }
+}
+
+.container .content .sendError {
+  display: block;
+  font-size: .24rem;
+  width: 100%;
+  height: .5rem;
+  text-align: center;
+  line-height: .5rem;
+  margin: .2rem auto .2rem;
+}
+
+.container .content .sendError span {
+  color: $baseBlue;
+
+}
+.container .content .sendError .tip{
+  display: inline-block;
+  width: 5rem;
+  height: 100%;
+  background: #c9caca;
+  -webkit-border-radius: .16rem;
+  -khtml-border-radius: .16rem;
+  -moz-border-radius: .16rem;
+  -ms-border-radius: .16rem;
+  -o-border-radius: .16rem;
+  border-radius: .16rem;
+  color: #fff;
+  padding: 0 0.2rem;
+}
+.container .footer .footer-select {
+  width: 100%;
+  height: 4.3rem;
+  //height: 3.8rem;
+  padding: .4rem .6rem;
+  box-sizing: border-box;
+  background: #fff;
+  text-align: center;
+  line-height: 0;
+  .footer-fn-box{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .icon{
+      font-size: 1.1rem;
+      position: absolute;
+    }
+  }
+  .footer-fn-box1{
+    margin-top: 0.3rem;
+    width: 2.84rem;
+  }
+}
+
+
+.container .footer .footer-select span {
+  display: inline-block;
+  width: 1.1rem;
+  box-sizing: border-box;
+  position: relative
+}
+
+.container .footer .footer-select input {
+  display: inline-block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  width: 1.08rem;
+  height: 1.08rem;
+  position: absolute;
+  left:0;
+  top:0;
+  box-sizing: border-box
+}
+
+.container .footer .footer-select b {
+  display: inline-block;
+  width: 1.08rem;
+  height: 1.08rem;
+  background-size: contain;
+}
+
+.container .footer .footer-select .fn-name {
+  //height: .4rem;
+  width: 100%;
+  height: .22rem;
+  text-align: center;
+  font-size: .22rem;
+  line-height: .22rem;
+  color: #898989;
+  margin-top: 1.25rem;
+}
+
+.chat-info .send-status, .send-status {
+  position: absolute;
+  display: inline-block;
+  width: .39rem;
+  height: .39rem;
+  background: url(../../assets/media/img/send-fail.png) no-repeat;
+  background-size: 0.39rem 0.39rem;
+  top: 0
+}
+
+.send-status {
+  left: -0.53rem
+}
+
+.chat-info .send-status {
+  left: -0.85rem
+}
+
+.container .footer .footer-select .photo b {
+  background: url(../../assets/media/img/fn-photo_icon.png) no-repeat;
+  background-size: 1.08rem 1.08rem;
+}
+
+.container .footer .footer-select .camera b {
+  background: url(../../assets/media/img/fn-camera_icon.png) no-repeat;
+  background-size: 1.08rem 1.08rem;
+}
+
+.container .footer .footer-select .reply b {
+  background: url(../../assets/media/img/fn-reply_icon.png) no-repeat;
+  background-size: 1.08rem 1.08rem;
+  position: relative
+}
+
+.container .footer .footer-select .gainData b {
+  background: url(../../assets/media/img/fn-gainData_icon.png) no-repeat;
+  background-size: 1.08rem 1.08rem;
+  position: relative
+}
+
+.container .invite_certified {
+  padding-left:.3rem;
+  width: 100%;
+  height: .7rem;
+  line-height: .7rem;
+  background: #fffcef;
+  font-size: .26rem;
+  font-family: PingFangSC-Medium, sans-serif;
+  color: #9fa0a0;
+  display: flex;
+  align-items: center;
+  margin-top: 0.8rem;
+  i{
+    margin-right: 0.2rem;
+  }
+}
+
+.container .invite_certified a {
+  color: $baseBlue;
+}
+.container .reply-dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  background: #f0eff5;
+  padding: .8rem .26rem .32rem;
+  overflow-y: scroll
+}
+
+.container .reply-dialog li {
+  padding: .31rem .34rem .25rem .37rem;
+  background: #fff;
+  font-size: .3rem;
+  line-height: .35rem;
+  -webkit-border-radius: .08rem;
+  -khtml-border-radius: .08rem;
+  -moz-border-radius: .08rem;
+  -ms-border-radius: .08rem;
+  -o-border-radius: .08rem;
+  border-radius: .08rem;
+  margin-top: .12rem;
+  word-break: break-all
+}
+
+.container .reply-dialog button {
+  display: block;
+  width: 100%;
+  height: .85rem;
+  background: #fff;
+  font-size: .36rem;
+  text-align: center;
+  margin-top: .2rem;
+  line-height: .85rem;
+  color: $baseBlue;
+  -webkit-border-radius: .08rem;
+  -khtml-border-radius: .08rem;
+  -moz-border-radius: .08rem;
+  -ms-border-radius: .08rem;
+  -o-border-radius: .08rem;
+  border-radius: .08rem
+}
+
+.container .reply-dialog-active {
+  display: block
+}
+
+.container .gainData-dialog {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 .25rem;
+  background: #f0eff5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none
+}
+
+.container .gainData-dialog-active {
+  display: block
+}
+
+.container .gainData-dialog input[type=checkbox] {
+  display: none
+}
+
+.container .gainData-dialog .gainData-select {
+  height: 1.2rem;
+  padding-left: .29rem;
+  padding-right: 1.32rem;
+  background: url(../../assets/media/img/home-my_grayArrow.png) right .38rem center no-repeat #fff;
+  background-size: 0.18rem 0.29rem;
+  line-height: 1.2rem;
+  font-size: .36rem
+}
+
+.container .gainData-dialog .gainData-select label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/media/img/chatData_nocheck_icon.png) right center no-repeat;
+  background-size: 0.41rem 0.41rem;
+}
+
+.container .gainData-dialog .select-1 input[type=checkbox]:checked+label {
+  background: url(../../assets/media/img/chatChildData_check_icon.png) right center no-repeat;
+  background-size: 0.41rem 0.41rem;
+}
+
+.container .gainData-dialog li input[type=checkbox]:checked+label {
+  background: url(../../assets/media/img/chatDataOther_check_icon.png) right center no-repeat;
+  background-size: 0.41rem 0.41rem;
+}
+
+.container .gainData-dialog .gainData-send {
+  display: block;
+  height: 1rem;
+  width: 6.3rem;
+  background: $baseBlue;
+  text-align: center;
+  margin: .7rem auto;
+  color: #fff;
+  font-size: .4rem;
+  -webkit-border-radius: .5rem;
+  -khtml-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border-radius: .5rem
+}
+
+.container .gainData-dialog .select-1 {
+  margin-top: .3rem;
+  border-left: .15rem solid #24dcbc;
+  -webkit-border-radius: .15rem 0 0 .15rem;
+  -khtml-border-radius: .15rem 0 0 .15rem;
+  -moz-border-radius: .15rem 0 0 .15rem;
+  -ms-border-radius: .15rem 0 0 .15rem;
+  -o-border-radius: .15rem 0 0 .15rem;
+  border-radius: .15rem 0 0 .15rem
+}
+
+.container .gainData-dialog ul {
+  margin-top: .25rem;
+  border-left: .15rem solid $baseBlue;
+  -webkit-border-radius: .15rem 0 0 .15rem;
+  -khtml-border-radius: .15rem 0 0 .15rem;
+  -moz-border-radius: .15rem 0 0 .15rem;
+  -ms-border-radius: .15rem 0 0 .15rem;
+  -o-border-radius: .15rem 0 0 .15rem;
+  border-radius: .15rem 0 0 .15rem
+}
+@keyframes ani {
+  0%, 29% {
+    width: 0.09rem;
+    height: 0.4rem
+  }
+  30%, 59% {
+    width: 0.18rem;
+    height: 0.40rem
+  }
+  100%, 60% {
+    width: 0.30rem;
+    height: 0.40rem
+  }
+}
+
+@-webkit-keyframes ani {
+  0%, 29% {
+    width: 0.09rem;
+    height: 0.40rem
+  }
+  30%, 59% {
+    width: 0.18rem;
+    height: 0.40rem
+  }
+  100%, 60% {
+    width: 0.30rem;
+    height: 0.40rem
+  }
+}
+.wrap{
+  padding-bottom: 1rem;
+}
+//录音区块
+.footer .voiceFn{
+  border: 1px solid white;
+  width: 100%;
+  height: 4.3rem;
+  background: url(../../assets/media/img/voice1.png) white no-repeat top 1.1rem center;
+  background-size: 1.87rem 1.87rem;
+  box-sizing: border-box;
+  span{
+    display: block;
+    text-align: center;
+    font-size: 0.28rem;
+    color: rgb(110,110,110);
+    margin-top: 3.4rem;
+  }
+}
+//.footer{
+.voiceRecord{
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 57;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.6);
+  .voiceContent{
+    width: 100%;
+    height: 4.3rem;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    h6{
+      font-size: 0.28rem;
+      line-height: 0.28rem;
+      text-align: center;
+      margin: 0.46rem 0 0.36rem;
+      img{
+        display: inline-block;
+        width: 1.2rem;
+        height: 0.28rem;
+      }
+      .img2{
+        transform-origin: 50% 50%;
+        transform: rotateY(180deg);
+      }
+      .hidden{
+        display: none;
+      }
+    }
+    img{
+      display: block;
+      width: 1.87rem;
+      height: 1.87rem;
+      margin: auto;
+    }
+    span{
+      display: block;
+      text-align: center;
+      font-size: 0.28rem;
+      color: rgb(110,110,110);
+      margin-top: 0.48rem;
+    }
+    .btns{
+      display: flex;
+      margin-top: 0.49rem;
+      border-top: 1px solid $iconGray;
+      button{
+        display: block;
+        width: 50%;
+        color: $baseBlue;
+        font-size: 0.28rem;
+        text-align: center;
+        background: white;
+        height: 0.8rem;
+        line-height: 0.8rem;
+      }
+      button:nth-of-type(1){
+        border-right: 1px solid $iconGray;
+      }
+    }
+  }
+}
+//}
+
+
+
+
+
+//订单状态样式
+
+//头部样式
+.hFreeIng{
+  padding-right: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+//底部样式
+.container .content .fServiceTip{
+  font-size: 0.24rem;
+  padding: 0.16rem 0.3rem;
+  margin-top: 0.26rem;
+  background: white;
+  line-height: 0.57rem;
+  border-radius: 0.08rem;
+  p{
+    line-height: 0.38rem;
+    padding-bottom: 0.3rem;
+  }
+  .p1{
+    padding-bottom: 0.17rem;
+    border-bottom: 1px solid $gray;
+  }
+  .btn{
+    line-height: 0.66rem;
+    color: $baseBlue;
+
+  }
+}
+.container .content .fServiceTip1{
+  margin-top: 0.74rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.24rem;
+  h6{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.5rem;
+    color: #797878;
+    i{
+      display: inline-block;
+      width: 2.8rem;
+      height: 1px;
+      background: #c9caca;
+    }
+    span{
+      margin: 0 0.16rem;
+    }
+  }
+  p{
+    padding:  0 0.5rem;
+    text-align: center;
+    line-height: 0.37rem;
+    color: #959595;
+  }
+  .blue{
+    color: $baseBlue;
+  }
+  .green{
+    color: $green;
+  }
+  .red{
+    color: #fc5d59;
+  }
+  .orange{
+    color: $orange;
+  }
+}
+
+.blue{
+  color: $baseBlue;
+}
+.green{
+  color: $green;
+}
+.red{
+  color: #fc5d59;
+}
+.orange{
+  color: $orange;
+}
+.serviceEndFn{
+  border-bottom: 1px solid #bfbfbf;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+  background: white;
+  justify-content: space-around;
+  font-size: 0.24rem;
+  height: 1rem;
+  display: flex;
+  color: $baseBlue;
+  align-items: center;
+  span{
+    //padding-right: 0.45rem;
+    border-right: 1px solid $baseBlue;
+  }
+  button{
+    padding: 0 0.3rem;
+    line-height: 0.4rem;
+    background: white;
+    border: 1px solid $baseBlue;
+    border-radius: 0.2rem;
+    color: $baseBlue;
+  }
+  .set-free{
+    margin: 0 0.2rem 0 0.3rem;
+  }
+  .serviceEndFnTip{
+    padding-right: 0.2rem;
+    font-size: 0.28rem;
+  }
+}
+//图文咨询（按次）和图文咨询（按期）样式
+.container .content .serviceInfo{
+  padding: 0 0.3rem;
+  background: white;
+  font-size: 0.3rem;
+  border-radius: 0.2rem;
+  margin-top: 0.26rem;
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray;
+    position: relative;
+    .left{
+      display: flex;
+      align-items: center;
+    }
+    .consult{
+      font-size: 0.63rem;
+      margin-right: 0.23rem;
+    }
+    line-height: 1.1rem;
+    color: $baseBlue;
+    .price{
+      color: black;
+      margin-left: 0.14rem;
+    }
+    .status{
+      font-size: 0.24rem;
+    }
+  }
+  .serviceBaseInfo{
+    padding: 0.28rem 0 0.07rem ;
+    font-size: 0.28rem;
+    li{
+      margin-bottom: 0.22rem;
+      color: $fGray;
+      word-break: break-all;
+      span{
+        color: black;
+      }
+    }
+    .illDetail{
+      overflow: hidden;
+    }
+    .illDetail-active{
+      max-height: none;
+    }
+    .line{
+      border-bottom: 1px dashed $gray;
+      margin-bottom: 0.3rem;
+      padding-bottom: 0;
+    }
+  }
+  .btn{
+    height: 1.04rem;
+    border-top: 1px solid $gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    button{
+      font-size: 0.24rem;
+      background: white;
+      color: $baseBlue;
+      padding: 0.12rem;
+      border: 1px solid $baseBlue;
+      border-radius: 0.06rem;
+    }
+    .btn1{
+      color: $red;
+      border: 1px solid $red;
+    }
+  }
+  .images{
+    padding-bottom: 0.14rem;
+    img{
+      display: inline-block;
+      width: 1.34rem;
+      height: 1.07rem;
+      margin-right: 0.33rem;
+      margin-bottom: 0.22rem;
+    }
+    img:nth-of-type(4){
+      margin-right: 0;
+    }
+  }
+}
+
+//新咨询解决问题样式
+.container .content .inquiry_service_text{
+  span{
+    color: black;
+    display: block;
+    word-break: break-all;
+    font-size: 0.28rem;
+  }
+  .patient-text{
+    font-size: 0.28rem;
+  }
+}
+
+
+
+//门诊时间表样式
+.order-time {
+  background: url(../../assets/media/img/my-oreder_bg.png) rgb(240,239,245) no-repeat top left;
+  padding-top: 1px;
+  background-size: 100% 2.95rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 56;
+  header{
+    position: relative;
+    i{
+      position: absolute;
+      font-size: 0.34rem;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0.3rem;
+    }
+  }
+  .order-content{
+    height: calc(100% - 1.8rem);
+    overflow: scroll;
+    padding-bottom: 0.3rem;
+    box-sizing: border-box;
+
+  }
+  .order-content1{
+    height: calc(100% - 1rem);
+  }
+  .order-time-send{
+    display: block;
+    margin: 0.3rem  auto 0;
+    width: 6.9rem;
+    height: 1rem;
+    line-height: 1rem;
+    background: rgb(6, 147, 252);
+    color: white;
+    font-size: 0.4rem;
+    text-align: center;
+    border-radius: 0.06rem;
+  }
+}
+.order-time header{
+  width: 7.2rem;
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .32rem;
+  color: white;
+  //background: url(../../assets/media/img/arrow-white_down_icon.png) rgb(74, 157, 254) no-repeat right .6rem center;
+  text-align: center;
+  margin: 0.2rem  auto;
+  background-size: 0.37rem 0.2rem;
+  box-sizing: border-box;
+  padding:  0 .95rem;
+  -webkit-border-radius: .16rem .16rem 0 0;
+  -moz-border-radius:  .16rem .16rem 0 0;
+  -ms-border-radius:  .16rem .16rem 0 0;
+  -o-border-radius:  .16rem .16rem 0 0;
+  border-radius:  .16rem .16rem 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.order-time  .select{
+  position: absolute;
+  width: 7.2rem;
+  left: 50%;
+  margin-left: -3.60rem;
+  top: .8rem;
+  z-index: 20;
+  height: 0;
+  background: white;
+  -webkit-border-radius:  0 0 .16rem .16rem;
+  -moz-border-radius:  0 0 .16rem .16rem;
+  -ms-border-radius:  0 0 .16rem .16rem;
+  -o-border-radius:  0 0 .16rem .16rem;
+  border-radius:  0 0 .16rem .16rem;
+  overflow: hidden;
+}
+.order-time .content-deactive{
+  visibility: hidden;
+}
+.order-time  .select li{
+  height: .9rem;
+  font-size: .34rem;
+  text-align: center;
+  background: white;
+  line-height: .9rem;
+  color: rgb(132, 188, 252);
+}
+.order-time  .select  .selected{
+  color: rgb(42, 140, 255);
+  font-weight: bolder;
+}
+/*选择列表 活跃状态*/
+.order-time   .select-active{
+  height: auto;
+}
+.order-time  .select .select-li-active{
+  color: rgb(42, 140, 255);
+}
+/*每个box*/
+.order-time .section{
+  width: 7.2rem;
+  height: 2.66rem;
+  background: white;
+  -webkit-border-radius:.2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius:  .2rem;
+  border-radius:  .2rem;
+  margin:  .1rem auto;
+  box-sizing: border-box;
+  padding: .2rem .46rem .42rem .45rem;
+  position: relative;
+}
+.order-time .section .timeData{
+  font-size: .34rem;
+  padding-left: .8rem;
+  height: .7rem;
+  line-height: .7rem;
+  background: url(../../assets/media/img/my-order_day_icon.png) no-repeat left center;
+  position: relative;
+  background-size: 0.44rem 0.44rem;
+}
+.order-time .section .timeData .time{
+  margin-left: .5rem;
+}
+.order-time .section .hospital{
+  height: .6rem;
+  line-height: .6rem;
+  color: rgb(114, 113, 113);
+  font-size: .32rem;
+}
+.order-time .section .count{
+  height: .5rem;
+  line-height: .5rem;
+  font-size: .26rem;
+  color: rgb(114, 113, 113);
+}
+.order-time .section .count span{
+  color: rgb(42, 140, 255);
+  font-size: .34rem;
+}
+.order-time .section .address{
+  font-size: .26rem;
+  padding-left: .45rem;
+  height: .5rem;
+  line-height: .5rem;
+  color: rgb(114, 113, 113);
+  background: url(../../assets/media/img/order-address_icon.png) no-repeat left center;
+  background-size: 0.3rem 0.36rem;
+}
+/*免费预约按钮*/
+.order-time .section .order-btn{
+  display: inline-block;
+  width: 1.75rem;
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  color: rgb(42, 140, 255);
+  border: 1px solid rgb(42, 140, 255);
+  background: white;
+  font-size: .34rem;
+  position: absolute;
+  right: .46rem;
+  bottom: .4rem;
+  -webkit-border-radius:.12rem;
+  -moz-border-radius: .12rem;
+  -ms-border-radius: .12rem;
+  -o-border-radius:  .12rem;
+  border-radius:  .12rem;
+}
+.order-time .section .order-btn-deactive{
+  background: rgb(204, 201, 201);
+  color: white;
+  border: 1px solid rgb(204, 201, 201);
+}
+//对话中各种图表的样式
+.container .content .doctor .doctor-charts{
+  width: 4.5rem;
+  //height: 1.76rem;
+  background: white;
+  padding:  0 0.3rem 0.26rem 0.3rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 0.06rem;
+  .title{
+    font-size: 0.28rem;
+    color: black;
+    line-height: 0.78rem;
+  }
+  .text{
+    font-size: 0.24rem;
+    color: #7b7a7a;
+    display: flex;
+    line-height: 0.4rem;
+  }
+  .doc-text{
+    display: block;
+  }
+  .icon{
+    font-size: 0.85rem;
+    margin-right: 0.2rem;
+  }
+  .triangle{
+    position: absolute;
+    border-bottom: .09rem solid transparent;
+    border-right: .1rem solid transparent;
+    border-top: .09rem solid transparent;
+    border-left: .1rem solid white;
+    right: -0.19rem;
+    display: inline-block;
+    top: .32rem
+  }
+}
+.container .content .patient .patient-charts{
+  width: 4rem;
+  background: white;
+  padding:  0.3rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 0.06rem;
+  .text{
+    font-size: 0.24rem;
+    color: #7b7a7a;
+    display: flex;
+    line-height: 0.24rem;
+  }
+  .title{
+    font-size: 0.28rem;
+    color: black;
+    line-height: 0.28rem;
+  }
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .icon{
+    font-size: 0.85rem;
+    margin-right: 0.2rem;
+  }
+  .triangle{
+    position: absolute;
+    border-bottom: .09rem solid transparent;
+    border-left: .1rem solid transparent;
+    border-top: .09rem solid transparent;
+    border-right: .1rem solid white;
+    left: -0.19rem;
+    display: inline-block;
+    top: .32rem
+  }
+}
+//点击加号 区域滚动
+.container .content2{
+  margin-top: -5.3rem;
+}
+
+.container .content1{
+  margin-top: -0.8rem;
+}
+//发送消息时的状态蒙层
+.img-mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 0.24rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  img{
+    display: inline-block;
+    width: 0.56rem;
+    height: 0.56rem;
+  }
+  .process{
+    display: block;
+    line-height: 0.4rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+.text-process{
+  position: absolute;
+  display: inline-block;
+  width: 0.56rem;
+  height: 0.56rem;
+  left: -0.8rem;
+  top:50%;
+  transform: translateY(-50%);
+}
+.container {
+  .allPat{
+    font-size: 0.26rem;
+    background: white;
+    padding: 0 0.2rem 0.2rem 0.2rem;
+    h6{
+      height: 0.6rem;
+      line-height: 0.6rem;
+      color: $baseBlue;
+    }
+    p{
+      border: 1px solid $baseBlue;
+      border-radius: 0.1rem;
+      padding: 0.1rem;
+      line-height: 0.4rem;
+      max-height: 6rem;
+      overflow: scroll;
+    }
+  }
+}
+
+//文字输入弹窗样式
+.textMask{
+  width: 100%;
+  height: calc(100vh - 2.5rem);
+  position: fixed;
+  // bottom: calc(2.5rem - 100vh);
+  line-height: 0;
+  //top:0;
+  left:0;
+  bottom: 0;
+  z-index: -1;
+  //transition:  bottom 0.4s ease;
+  opacity: 0;
+  //z-index: 57;
+  //z-index: ;
+  .textMaskContent{
+    height: 100%;
+    background: $gray;
+    .maskInputContent{
+      // padding: 0.48rem 0.3rem 0 0.46rem;
+      padding: 0.2rem 0.3rem 0 0.3rem;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+      .closeMask{
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        position: absolute;
+        top:0;
+        left: 0;
+        background: url("../../assets/media/img/chat-close.png") 0.1rem 0.1rem no-repeat;
+        background-size: 0.26rem 0.26rem;
+        //span{
+        //    margin: 0 0.12rem;
+        //}
+      }
+      .maskInput{
+        width: 100%;
+        height: 1.55rem;
+        border: 1px solid $iconGray;
+        padding: 0.1rem;
+        background: white;
+        border-radius: .12rem;
+        box-sizing: border-box;
+        textarea{
+          width: 100%;
+          font-size: .3rem;
+          height: 100%;
+          line-height: .4rem;
+          word-break: break-all;
+          vertical-align: bottom;
+          outline: 0;
+          position: relative;
+          // overflow-y: scroll;
+          // overflow-x: hidden;
+        }
+      }
+      .fn{
+        width: 100%;
+        min-height: 0.6rem;
+        padding: 0.1rem 0;
+        margin-top: 0.15rem;
+        // overflow-x: scroll;
+        // overflow-y: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .send{
+          width: 1.27rem;
+          height: 100%;
+          background: $iconGray;
+          color: #fff;
+          text-align: center;
+          font-size: .3rem;
+          line-height: .6rem;
+          -webkit-border-radius: .12rem;
+          -khtml-border-radius: .12rem;
+          -moz-border-radius: .12rem;
+          -ms-border-radius: .12rem;
+          -o-border-radius: .12rem;
+          border-radius: .12rem;
+        }
+        .cancle{
+          margin-right: 0.2rem;
+        }
+        .send-active{
+          background: $baseBlue;
+        }
+      }
+    }
+  }
+}
+.mask{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top:0;
+  background: rgba(0,0,0,0.6);
+  z-index: 56;
+}
+.textMask1{
+  z-index: 57;
+  opacity: 1;
+  animation: ani 0.2s;
+}
+.textMask2{
+  height: calc(100% - 2.3rem);
+}
+@keyframes ani {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+pre{
+  display:inline-block;
+  white-space: pre-wrap; /*css-3*/
+  white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+  white-space: -pre-wrap; /*Opera4-6*/
+  white-space: -o-pre-wrap; /*Opera7*/
+  word-wrap: break-word;
+}

@@ -1,0 +1,276 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video,button,input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+#science_showArticle html,#science_showArticle textarea, #science_showArticle body,#science_showArticle div,#science_showArticle span,#science_showArticle iframe,#science_showArticle h1,#science_showArticle h2,#science_showArticle h3,#science_showArticle h4,#science_showArticle h5,#science_showArticle h6,#science_showArticle p,#science_showArticle blockquote,#science_showArticle pre,#science_showArticle a,#science_showArticle abbr,#science_showArticle acronym,#science_showArticle address,#science_showArticle big,#science_showArticle cite,#science_showArticle code,#science_showArticle del,#science_showArticle dfn,#science_showArticle em,#science_showArticle img,#science_showArticle strong,#science_showArticle b,#science_showArticle u,#science_showArticle i,#science_showArticle center,#science_showArticle dl,#science_showArticle dt,#science_showArticle dd,#science_showArticle ol,#science_showArticle ul,#science_showArticle li,#science_showArticle fieldset,#science_showArticle form,#science_showArticle label,#science_showArticle legend,#science_showArticle table,#science_showArticle caption,#science_showArticle tbody,#science_showArticle tfoot,#science_showArticle thead,#science_showArticle tr,#science_showArticle th,#science_showArticle td,#science_showArticle article,#science_showArticle aside,#science_showArticle canvas,#science_showArticle details,#science_showArticle embed,#science_showArticle section,#science_showArticle summary,#science_showArticle time,#science_showArticle audio,#science_showArticle video,#science_showArticle button,#science_showArticle input {
+  /*font-style:normal;*/
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+
+}
+#science_showArticle strong{
+  font-weight:bold;
+}
+#science_showArticle em{
+  font-style:italic;
+}
+#science_showArticle li, #science_showArticle ul {
+  list-style-type: inherit;
+  /*list-style-position:inside;*/
+}
+#science_showArticle li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    margin: 0 0 0 0.2rem;
+}
+
+/*调整webkit input  placeholder*/
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #727171;
+  font-size: 0.28rem;
+}
+input,textarea{
+  outline: none;
+  -webkit-appearance: none;
+}
+textarea{
+  word-break: break-all;
+}
+input[type="radio"]{
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+li, ul {
+  list-style-type: none
+}
+
+body{
+  -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
+  -moz-user-select: none;
+}
+body div[data="copy"]{
+  user-select:text;
+  -webkit-user-select:text;
+}
+img[data="nopre"]{
+  pointer-events: none;
+}
+button, input, select, textarea {
+  outline: 0;
+  border: none;
+  padding: 0;
+}
+/*禁止微信ios下字体放大*/
+body{
+  -webkit-text-size-adjust: 100% !important;
+}
+
+img {
+  border: 0;
+  vertical-align: top
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  position: absolute;
+}
+
+body {
+  background: #f0eff5;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif
+}
+a, a:link {
+  color: #222;
+  text-decoration: none
+}
+
+a:focus {
+  outline: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+
+
+
+
+/*过渡动画 从底部弹出*/
+.slider-bTt-enter-to,.slider-bTt-leave{
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.slide-bTt-enter-active,.slide-bTt-leave-active {
+  z-index: 3;
+}
+.slider-bTt-enter,.slider-bTt-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  transform: translateY(100%);
+  opacity: 1;
+}
+
+
+/*.slide-bTt-enter-active {*/
+  /*transition: all 3s ease;*/
+/*}*/
+/*.slide-bTt-leave-active {*/
+  /*transition: all 3s cubic-bezier(1.0, 0.5, 0.8, 1.0);*/
+/*}*/
+/*.slide-bTt-enter, .slide-bTt-leave-to*/
+  /*!* .slide-fade-leave-active for below version 2.1.8 *! {*/
+  /*transform: translateY(100%);*/
+  /*opacity: 0;*/
+/*}*/
+
+
+/*过渡动画*/
+.slider-in-enter-active{
+  transition: all 0.5s ease;
+  left: 0;
+  top:0;
+  position: absolute;
+  z-index: 3;
+}
+.slider-in-leave-active{
+  /*transition: all 0.5s ease;*/
+  /*left: 0;*/
+  /*top:0;*/
+  /*z-index: 1;*/
+  opacity: 0;
+  /*position: absolute;*/
+}
+.slider-in-enter /* .fade-leave-active in below version 2.1.8 */ {
+  transform: translateX(100vw);
+  opacity: 1;
+}
+.slider-in-leave-to,.slider-in-leave{
+  opacity: 0;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*过渡动画*/
+.slider-in1-enter-active{
+  transition: all 0.5s ease;
+  left: 0;
+  top:0;
+  position: absolute;
+  z-index: 3;
+}
+.slider-in1-leave-active{
+  /*transition: all 0.5s ease;*/
+  /*left: 0;*/
+  /*top:0;*/
+  /*z-index: 1;*/
+  opacity: 0;
+  /*position: absolute;*/
+}
+.slider-in1-enter /* .fade-leave-active in below version 2.1.8 */ {
+  transform: translateX(-100vw);
+  opacity: 1;
+}
+.slider-in1-leave-to,.slider-in1-leave{
+  opacity: 0;
+  transform: translateX(0);
+}
+
+
+
+
+
+.slider-out-enter-active{
+  transition: all 0.5s ease;
+  left: 0;
+  top:0;
+  position: absolute;
+  z-index: 3;
+}
+.slider-out-leave-active{
+  transition: all 0.5s ease;
+  left: 0;
+  top:0;
+  z-index: 1;
+  position: absolute;
+}
+.slider-out-enter /* .fade-leave-active in below version 2.1.8 */ {
+  transform: translateX(-100vw);
+  opacity: 1;
+}
+.slider-out-leave-to,.slider-out-leave{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/*过渡动画*/
+.b-pop-enter-active{
+  transition: all 1s ease;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.b-pop-leave-active{
+  transition: all 1s ease;
+  left: 0;
+  transform: translateY(100vh);
+}
+.b-pop-enter /* .fade-leave-active in below version 2.1.8 */ {
+  transform: translateY(100vh);
+  opacity: 0;
+  z-index: 57;
+}
+.b-pop-leave-to,.b-pop-leave{
+  opacity: 0;
+  bottom: 0;
+  z-index: 57;
+}
+
+/*过渡动画*/
+.wear-enter-active{
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+.wear-leave-active{
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+.wear-enter /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0;
+}
+.wear-leave-to,.wear-leave{
+  opacity: 1;
+}
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+@import "../../assets/css/common.scss";
+    .btns{
+        text-align: center;
+        padding-top: 20px;
+        span{
+            display: inline-block;
+            width:150px;
+            height:44px;
+            background:$base_blue;
+            border-radius:4px;
+            color: white;
+            line-height: 44px;
+            box-sizing: border-box;
+        }
+        .cancle{
+            background:$btn_bg;
+            color: $gray_b;
+            border: 1px solid $gray_d1;
+            margin-left: 20px;
+        }
+    }
+
+    

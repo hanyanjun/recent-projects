@@ -1,0 +1,4 @@
+@function rm($px, $base-font-size: 100px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+

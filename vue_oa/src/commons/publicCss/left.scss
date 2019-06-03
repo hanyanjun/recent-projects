@@ -1,0 +1,523 @@
+.el-aside {
+    background-color: #374150;
+    overflow-y: auto !important;
+    .el-button--primary:active,
+    .el-button--primary:focus,
+    .el-button--primary {
+        color: rgb(17, 17, 17);
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.left-show .el-menu>.el-menu-item.is-active {
+    color: #fff;
+}
+
+.el-aside .el-tooltip__popper.is-dark {
+    visibility: hidden;
+}
+/*滚动条样式*/
+.el-aside::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+    background-color: #4e5c6f;
+}
+.el-aside::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px #0c9782;
+    background: #0c9782;
+}
+.el-aside::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px #4e5c6f;
+    border-radius: 0;
+    background: #4e5c6f;
+}
+.el-aside::-webkit-scrollbar-corner{
+    width: 10px;
+    background-color: #4e5c6f
+}
+
+.el-aside {
+    z-index: 2;
+    input:-ms-input-placeholder {
+        color: #b3bbc7;
+    }
+    input::-webkit-input-placeholder {
+        color: #b3bbc7;
+    }
+    .u-menu-iconleft {
+        width: auto;
+        position: absolute;
+        right: 35px;
+        top: 11px;
+        z-index: 15;
+        i {
+            font-size: 12px;
+            color: #fff;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+    }
+    .el-radio-group {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        .el-radio-button__inner {
+            width: 45px;
+            height: 45px;
+            font-size: 41px;
+        }
+        .logo-left {
+            width: 240px;
+            margin-top: 5px;
+            .logo-img {
+                display: block;
+                height: 45px;
+                // background-image: url(../images/logo-sm.png);
+                background-repeat: no-repeat;
+                background-size: 60%;
+                background-position: 35%;
+                cursor: pointer;
+            }
+        }
+    }
+    height: 100%;
+    width: auto !important;
+    background-color:  #374150;
+    overflow: inherit;
+    div {
+        color: #b3bbc7;
+    }
+    .btn-menu {
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        color: #b3bbc7;
+    }
+    .el-menu-item {
+        height: 45px;
+        line-height: 45px;
+        color: #b3bbc7;
+        padding-left: 10px !important;
+    }
+    .el-submenu__title,
+    .el-menu-item:hover {
+        i {
+            color: #fff
+        }
+    }
+    .el-menu-item:last-child {
+        border-bottom: 0 !important;
+    }
+    .el-menu--collapse {
+        width: 45px;
+    }
+    [role="menuitem"] div {
+        height: 45px;
+        line-height: 45px;
+        padding-left: 10px !important;
+        i {
+            color: #b3bbc7;
+        }
+        i:hover {
+            color: #fff;
+        }
+    }
+    .el-menu-item:focus {
+        background-color:  #374150;
+    }
+    .el-menu-item:hover,
+    .is-opened {
+        background-color: #1baf9b;
+        color: #fff;
+        div {
+            i {
+                color: #fff;
+            }
+        }
+        .el-submenu__title {
+            i {
+                color: #fff !important;
+                background-color: #1baf9b !important;
+            }
+            .el-icon-arrow-right {
+                background-color: transparent !important;
+                top: 25px;
+                position: absolute;
+                float: right;
+            }
+        }
+    }
+    .is-active {
+        color: #1baf9b;
+    }
+    .el-radio-button.is-active {
+        display: none;
+    }
+    .el-menu {
+        background-color:  #374150;
+        border: 0;
+        border-radius: 0 !important;
+    }
+    span {
+        color: #b3bbc7;
+    }
+    .el-submenu__title {
+        border-radius: 0;
+    }
+    .el-submenu__title:hover {
+        background-color: #1baf9b;
+        color: #fff;
+        span {
+            color: #fff !important;
+        }
+    }
+    .el-menu--collapse .el-submenu .el-menu {
+        margin-left: 0px;
+        border: 0;
+        box-shadow: none;
+    }
+    .el-menu-item-group {
+        .el-menu-item {
+            color: #b3bbc7 !important;
+        }
+        .el-menu-item:hover {
+            background-color:  #374150 !important;
+        }
+        .el-menu-item-group__title {
+            padding: 0;
+            font-size: 14px;
+            background-color:  #374150 !important;
+            span {
+                color: #b3bbc7;
+            }
+        }
+    }
+    .el-menu-item-group:first-child .el-menu-item-group__title {
+        background-color: #1baf9b !important;
+        span {
+            color: #fff !important;
+        }
+    }
+    .el-radio-button__inner {
+        width: 25px;
+        height: 25px;
+        background-color: #293543;
+        border: 0 !important;
+        border-radius: 0;
+        padding: 0;
+        line-height: 25px;
+        i {
+            color: #b3bbc7;
+            font-size: 16px;
+        }
+    }
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    height: 100%;
+}
+
+.left-show {
+    width: 240px;
+    transition: width .5s;
+    -moz-transition: width .5s;
+    /* Firefox 4 */
+    -webkit-transition: width .5s;
+    /* Safari 和 Chrome */
+    -o-transition: width .5s;
+    .left-search-icon {
+        >i {
+            display: none;
+        }
+        .left-search {
+            width: 240px;
+            transition: width .5s;
+            -moz-transition: width .5s;
+            /* Firefox 4 */
+            -webkit-transition: width .5s;
+            /* Safari 和 Chrome */
+            -o-transition: width .5s;
+        }
+    }
+    .el-menu-item-group:first-child .el-menu-item-group__title {
+        background-color:  #374150 !important;
+        span {
+            color: #b3bbc7 !important;
+        }
+    }
+    .is-opened {
+        .el-submenu__title {
+            color: #fff;
+            span {
+                color: #fff;
+            }
+        }
+    }
+    .el-submenu {
+        .el-menu-item {
+            padding-left: 20px !important;
+        }
+        .el-menu-item:hover {
+            background-color:  #374150;
+            color: #fff;
+        }
+        .el-menu-sec.is-active {
+            background-color:  #374150
+        }
+        .el-menu-item-group__title {
+            padding-left: 30px !important;
+        }
+        [tabindex="-1"] {
+            padding-left: 40px !important;
+        }
+        .el-submenu__title {
+            i {
+                background-color: transparent !important;
+            }
+        }
+    }
+    .el-menu-item {
+        padding-left: 10px !important;
+        border-bottom: 1px solid  #374150;
+    }
+    .el-menu-item:last-child {
+        border-bottom: none;
+    }
+    .el-menu-item:hover {
+        span {
+            color: #fff !important;
+        }
+    }
+    .el-submenu__title:hover {
+        color: #fff !important;
+        span {
+            color: #fff !important;
+        }
+        i {
+            color: #fff !important;
+        }
+    }
+    .el-radio-group {
+        display: block;
+        overflow: hidden;
+        padding-top: 10px;
+        background-color:  #374150;
+        padding-bottom: 10px;
+        .logo-left {
+            display: block;
+            overflow: hidden;
+            .el-radio-button__inner {
+                width: 25px;
+                height: 25px;
+                font-size: 15px;
+                transition: all 0s;
+                i {
+                    font-size: 16px;
+                }
+            }
+            .logo-img {
+                // background-image: url(../images/logo.png);
+                width: 120px;
+                height: 30px;
+                background-size: 100%;
+                display: inline-block;
+                background-position: 0;
+            }
+            .el-radio-button {
+                float: right;
+                right: 14px;
+                top: 3px;
+            }
+        }
+    }
+    .el-radio-button:last-child .el-radio-button__inner {
+        border-radius: 0;
+    }
+    .el-menu {
+        .is-active.el-menu-item {
+            background-color:  #374150;
+            span {
+                color: #fff;
+            }
+        }
+    }
+    .el-menu-vertical-demo>.is-active.is-opened .el-submenu__title:before,
+    .el-menu-vertical-demo>.el-menu-item.is-active:before {
+        content: '';
+        display: block;
+        background-image: none;
+        float: right;
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        background: none;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 12px solid #f0f3fa;
+    }
+}
+
+.left-search-main {
+    position: relative
+}
+
+.left-hide {
+    .u-rel .u-menu-iconleft {
+        display: none;
+    }
+    width: 45px;
+    transition: width .5s;
+    -moz-transition: width .5s;
+    /* Firefox 4 */
+    -webkit-transition: width .5s;
+    /* Safari 和 Chrome */
+    -o-transition: width .5s;
+    .el-menu-vertical-demo {
+        width: 45px;
+        transition: width .2s;
+        -moz-transition: width .2s;
+        /* Firefox 4 */
+        -webkit-transition: width .2s;
+        /* Safari 和 Chrome */
+        -o-transition: width .2s;
+    }
+    .el-menu-item:hover {
+        .title-text {
+            display: block;
+            width: 200px;
+            height: 45px;
+            position: absolute;
+            left: 45px;
+            top: 0px;
+            background-color: #1baf9b;
+            color: #fff;
+            line-height: 45px;
+            padding-left: 20px;
+            visibility: visible;
+        }
+        span {
+            color: #Fff;
+        }
+    }
+    .is-active {
+        .el-tooltip i {
+            color: #1baf9b;
+        }
+        .el-tooltip {}
+    }
+    .el-radio-button__inner {
+        width: 45px;
+        height: 45px;
+        background-color: #24303e;
+        .el-icon-menu-jpg {
+            position: relative;
+            top: 8px;
+            left: -1px;
+        }
+    }
+    .el-radio-group .logo-left {
+        width: 45px;
+        transform: width .5s;
+    }
+    .left-search {
+        display: block;
+        width: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        transition: width .5s;
+        -moz-transition: width .5s;
+        /* Firefox 4 */
+        -webkit-transition: width .5s;
+        /* Safari 和 Chrome */
+        -o-transition: width .5s;
+    }
+    .left-search-icon {
+        height: 45px;
+        display: block;
+        font-size: 20px;
+        line-height: 45px;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+        cursor: pointer;
+        .u-s-inp {
+            width: 0;
+        }
+        i {
+            color: #b3bbc7;
+        }
+    }
+    .left-search-icon:hover {
+        .left-search {
+            width: 240px;
+            display: block;
+            position: absolute;
+            visibility: inherit;
+            left: 45px;
+            top: 0px;
+            background-color:  #374150;
+            .u-s-inp {
+                width: 220px;
+                border-bottom: 0;
+                background-color:  #374150;
+                top: -3px;
+            }
+            i {
+                right: 10px;
+                top: 15px;
+                font-size: 14px;
+                color: #b3bbc7;
+            }
+        }
+    }
+}
+
+.left-search {
+    display: block;
+    height: 45px;
+    position: relative;
+    background-color:  #374150;
+    .u-s-inp {
+        width: 205px;
+        transition: width .5s;
+        -moz-transition: width .5s;
+        /* Firefox 4 */
+        -webkit-transition: width .5s;
+        /* Safari 和 Chrome */
+        -o-transition: width .5s;
+        line-height: 25px;
+        border-bottom: 1px solid #b3bbc7;
+        background-color:  #374150;
+        margin-left: 15px;
+        padding-right: 20px;
+        font-size: 14px;
+        color: #b3bbc7;
+        position: relative;
+        top: 5px;
+    }
+    i {
+        position: absolute;
+        float: right;
+        right: 20px;
+        top: 10px;
+        color: #b3bbc7;
+    }
+    .el-icon-close {
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.el-icon-menu-jpg {
+    width: 30px;
+    height: 27px;
+    // background-image: url(../images/sidebar_inline_toggler_icon_darkblue.jpg)
+}

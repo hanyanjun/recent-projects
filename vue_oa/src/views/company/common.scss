@@ -1,0 +1,28 @@
+@import "../../assets/css/common.scss";
+ 
+.companyCommon{
+    .btns{
+        text-align: center;
+        padding-top: 20px;
+        span{
+            display: inline-block;
+            width:150px;
+            height:44px;
+            background:$base_blue;
+            line-height: 44px;
+            border-radius:4px;
+            color: white;
+            box-sizing: border-box;
+        }
+        .cancle{
+            background:$btn_bg;
+            color: $gray_b;
+            border: 1px solid $gray_d1;
+            margin-left: 20px;
+        }
+    }
+}
+
+
+
+    

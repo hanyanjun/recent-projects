@@ -1,0 +1,428 @@
+
+// font-字体
+font16
+  font-size: 16px
+font18
+  font-size: 18px
+.font14
+  font-size: 14px
+// color-颜色
+colorFF
+  color: #10B2FF
+colorFB
+  color: #1F9EFB
+color555
+  color: #555555
+.color6F
+  color: #E96F6F
+.color9D
+  color: #52D99D
+.colorFE
+  color: #10B2FE
+
+.class1
+  color: #2CD48F
+.class0
+  color: #FFA646
+.class11
+  color: #3C73B1
+  cursor: pointer
+.classCC
+  color: #CCCCCC
+.classRed
+  color: #FF4E31
+// width-宽度
+.width360
+  width: 360px !important
+.width290
+  width: 290px !important
+.width300
+  width: 300px !important
+.width614
+  width: 614px
+.padRight12
+  padding-right: 12px
+
+.floatLeft
+  float: left
+.floatRight
+  float: right
+.clearBoth
+  clear: both
+// 筛选
+.termFilterDiv
+  font-size: 12px
+  padding-left: 26px
+  margin-top: -10px
+  .el-tag--small
+    border-radius: 13px
+    margin: 6px 3px
+    height: 26px
+    line-height: 26px
+    padding: 0 10px
+    color: #63717F
+    background: #fff
+    border: 1px solid #D6DDE4
+    .punctuation
+      width: 8px
+      height: 8px
+      background: rgba(195,203,214,1)
+      border-radius: 50%
+      margin-right: 6px
+      display: inline-block
+    .el-icon-close
+      color: #666666 !important
+// input-搜索
+.el-input--small
+  font-size: 12px
+.el-input--small .el-input__inner
+  height: 30px !important
+  line-height: 30px!important
+.inputSearchDiv
+  position: relative
+  width: 290px
+.searchIcon
+  position: absolute
+  left: 250px
+  color: #999999
+  padding: 5px 10px
+  cursor: pointer
+  top: 0px
+.searchIcon:before
+  font-size: 18px !important
+// button-按钮
+.el-button--small
+  padding: 8px 15px !important
+// table-title
+.topTitlediv
+  padding: 14px 26px
+  background: #f9f9f9
+  .tableTitleRight
+    font-size: 16px
+    font-weight: bold
+    font-family: MicrosoftYaHei-Bold !important
+    line-height: 32px
+    float: left
+  .tableTitleLeft
+    float: right
+    position: relative
+    .inputSearch
+      margin-right: 10px
+      height: 30px
+    .el-icon-search
+      position: absolute
+      left: 250px
+      color: #999999
+      padding: 5px 10px
+      cursor: pointer
+    .el-icon-search:before
+      font-size: 18px !important
+    .addBtn
+      background: #1F9EFB
+      color: #FFFFFF
+// table-有关
+.cell
+  color: #63717F
+  font-size: 12px
+.el-table::before
+  height: 0
+.el-table--border th,.el-table--border td
+  border-right: 0 !important
+  border-left: 0 !important
+.el-table--group, .el-table--border
+  // border: 1px solid #ebeef5 !important
+  border-bottom: 0
+.tableBorder
+  .el-table__header-wrapper
+    // border-top: 1px solid #e8e9ea
+    border-top: 1px solid #dcdfe6  
+  th.is-leaf,td
+    border-bottom: 1px solid #dcdfe6 !important
+.tableBorder .el-table__header-wrapper tr th
+    background: #f5f7f9
+    line-height: 18px !important
+.iconHide
+  padding: 0 4px
+  i
+    color: #ffffff
+.rowHandle
+  padding: 0 4px
+  cursor: pointer
+  color: #b5b8bb
+.rowHandle.el-icon-edit:before
+  font-size: 16px
+.rowHandle.el-icon-close:before,.rowHandle.el-icon-upload2:before
+  font-size: 18px
+.rowHandle:hover
+  font-weight: bold
+  color: #63717F
+// form-弹出框样式 - 所有
+.padleft12
+  .el-form-item__label
+    padding-left: 10px
+.elForm
+  padding-left: 20px
+  .el-form-item__label
+    text-align: left
+.dialog-footer .el-button--medium
+  padding: 10px 58px
+.el-dialog__header
+  border-bottom: 1px solid #DCDFE6
+  color: #555555
+  font-weight: bold
+  text-align: center
+  background: #F5F7FA
+  padding: 13px !important
+.el-dialog__headerbtn
+  top: 18px !important
+.el-dialog__footer
+  text-align: center !important
+  padding: 4px 20px 35px !important
+.dialog-footer .el-button--default
+  background: #F9F9F9
+// 分页
+.el-pagination
+  text-align: center !important
+  padding-top: 20px !important
+
+.el-icon-close-tip
+  display: none !important
+// table-部分 间距
+.electronicSignDiv  
+  .el-table--group, .el-table--border
+    border: 0
+.electronicSignDiv
+  .el-table .cell
+    line-height: 12px !important
+  .el-table th > .cell
+    line-height: 19px !important
+
+// 员工列表
+.employeeTab
+  .el-tabs__header
+    padding-left: 23px
+  .el-tabs__nav-scroll
+    .el-tabs__item
+      font-size: 16px
+    .el-tabs__item.is-active
+      @extend colorFF
+      font-weight: bold
+    .el-tabs__active-bar
+      background-color: #10B2FF
+  .el-tabs__nav-wrap::after
+    background-color: #F9F9F9
+  .el-table--group, .el-table--border
+    border: 1px solid #ebeef5 !important
+    border-bottom: 0 !important
+.employeeDiv .el-tabs--border-card > .el-tabs__content
+  padding-bottom: 0 !important
+#inOffice 
+  .el-dialog__body
+    padding: 18px 20px 4px 20px !important
+  .width60 
+    .el-form-item__label
+      width: 60px !important
+    .el-form-item__content
+      margin-left: 60px !important
+// 员工编辑
+#editInfo
+  .topTabs .el-tabs__header
+    padding-left: 10px
+  .bottomInfo .el-tabs__header,#positionInfo .el-tabs__header
+    padding-left: 0
+
+// 个人中心
+#personalCenter
+  .topTabs .el-tabs__header
+    padding-left: 10px
+  .bottomInfo .el-tabs__header
+    padding-left: 0
+  .el-tabs__content
+    height: 100%
+
+// 电子签名管理系统
+.electronicSignDiv
+  .el-table__header-wrapper
+    // border-bottom: 1px solid #DCDFE6
+  .el-table__header-wrapper tr th
+    background: rgba(245,247,249,1)
+  .el-table--group::after, .el-table--border::after, .el-table::before
+    display: none
+  .el-input--small .el-input__inner
+    height: 30px !important
+    line-height: 30px!important
+  .el-input__icon.el-icon-search
+    cursor: pointer
+  .el-icon-search:before
+    font-size: 18px !important
+  .el-dialog__headerbtn
+    top: 20px !important
+  .dialogPic
+    .el-dialog
+      min-height: 384px
+    .el-dialog__headerbtn
+      top: 2px !important
+  .elecSignPic
+    .el-upload--picture-card,.is-success,.el-upload-list__item-actions,.el-upload-list--picture-card,.is-uploading,.el-upload-list__item
+      height: 56px
+      width: 360px
+      line-height: 65px
+    .el-progress-circle
+      height: 0!important
+      width: 0!important
+
+// 编辑角色信息
+#editRoleList
+  .el-checkbox__label
+    font-size: 12px !important
+
+// 编辑个人信息
+.dialogPicEdit 
+  .el-dialog__headerbtn
+    top: 8px !important
+// 题目
+#addEditQuest
+  .changeItem
+    margin-bottom: 20px
+    .width978
+      max-width: 978px
+      .el-textarea__inner
+        height: 36px
+  .el-icon-plus:before
+    font-weight: bold 
+  .answerItem
+    .el-form-item__label
+      padding-left: 10px
+      margin-right: 5px
+  .changeItem .el-form-item__error
+    padding-left: 25px
+// 在线考试
+#alreadyTest
+  .el-tabs__header
+    padding-left: 20px !important
+  .el-tabs__nav-wrap::after
+    display: none
+  .el-tabs__item
+    font-size: 16px
+    padding-top: 10px
+    padding-bottom: 40px
+  .el-tabs__item.is-active
+    font-weight: bold
+#examAnalysis
+  .el-form-item__label
+    text-align: right
+    padding-left: 15px
+    // top: 10px
+.backIcon
+  font-size: 26px !important
+  color: #666
+  cursor: pointer
+
+.borderScroll
+  background: #f9f9f9 !important
+  border: 1px solid #DCDFE6 !important
+
+// 编辑公用
+.rightTitle
+  padding-left: 4px
+  float: left
+  font-size: 16px
+  font-family: MicrosoftYaHei-Bold
+  font-weight: bold
+  color: rgba(51,51,51,1)
+  height: 36px
+.editContentDiv
+  padding: 35px 50px 28px 20px
+  height: auto
+  border-radius: 2px
+  box-shadow: 0px 3px 5px 0px rgba(221,221,221,1)
+  border: 1px solid rgba(220, 223, 230, 1)
+  background: #fff
+.contentDivShow
+  float: left
+  width: calc(100% - 450px)
+.btnsShow
+  left: 22% !important
+.rightRecord
+  width: 350px
+  margin-left: 23px
+// 外出申请
+#goOut,#busTravel,#payment
+  .dialog-footer .el-form-item__content
+    text-align: center
+    margin-top: 30px
+    margin-left: -60px 
+    .el-button--medium
+      height: 44px
+      font-size: 14px
+    
+
+  .waitFormClass .el-form-item__label:before
+    color: #ffffff
+  .vehicleTable
+    .el-input--medium .el-input__inner
+      height: 50px
+      border-radius: 0
+      text-align: center
+    .el-input__inner
+      border: 1px solid #ffffff
+    .el-form-item__error
+      top: 62%
+    .otherText .el-textarea__inner
+      border: 0
+
+  .is-error .el-input__inner
+    border: 1px solid #f56c6c !important
+  
+  .tableScroll .el-form-item__content
+    overflow-x: auto
+    white-space: nowrap
+    overflow-y: hidden
+  .tableScroll td .el-form-item__content
+    margin-right: 0
+#goOut,#agreeDialog
+  .el-textarea__inner
+    min-height: 180px !important
+.cancelReason .el-textarea__inner
+  min-height: 135px !important
+.tablemin
+  height: calc(100% - 89px) !important
+.dropdownCheck
+  .popper__arrow
+    display: none !important
+  li
+    text-align: center
+  li:hover
+    color: #1F9EFB !important
+    background: #ffffff !important
+  li:first-child:hover
+    color: #606266 !important
+    background: #ffffff !important
+    cursor: default
+#waitForList
+  .cellClass .cell
+    color: #FFFFFF
+  .rowClass .rowHandle
+    color: #FFFFFF
+  .rowClass:hover,.rowClass:hover td
+    background-color: #1F9EFB !important
+  .rowClass:hover .cellClass .cell
+    color: #FFFFFF !important
+#menuList,#powerList,#roleTableDiv
+  .el-tabs__header
+    margin: 0
+  .el-tabs__item.is-active
+    @extend colorFF
+    font-weight: bold
+    font-size: 16px
+  .el-tabs__content
+    padding: 0
+  .el-tabs__nav-scroll
+    padding-left: 16px
+    border-top: 2px solid #ebeef5
+  .el-table--group::after, .el-table--border::after
+    display: none
+#menuList .listWrapNoScroll
+  height: calc(100vh - 215px)
+#powerList .listWrapNoScroll
+  height: calc(100vh - 295px)

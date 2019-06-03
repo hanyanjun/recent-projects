@@ -1,0 +1,842 @@
+@import "./common.scss";
+// 公共部分样式
+// 某些页面私有的部分
+.annInspInfo{
+    .el-collapse-item__wrap{
+        border: none;
+    }
+    .el-collapse-item__header{
+        border: none;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+.companyList{
+    height: 100%;
+    width: 100%;
+    .el-dialog{
+        min-width: 600px;
+    }
+    .search{
+        height: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .el-input{
+            width: 300px;
+        }
+        .el-input__inner{
+            height: 30px;
+            line-height: 30px;
+            width: 300px;
+            &:focus{
+                border: 1px solid #dcdfe6;
+            }
+        }
+        .search_input{
+            position: relative;
+            .el-input__inner{
+                height: 30px;
+            }
+            margin-right: 12px;
+            button{
+                z-index: 2;
+                height: 30px;
+                background: white;  
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-left: none;
+                .el-icon-search{
+                    font-size: 17px;
+                    color: $gray_c; 
+                    position: absolute;
+                    top: 6px;
+                    right: 6px;
+                }
+            }
+        }
+    }
+    .el-dialog__body{
+        padding-bottom: 18px;
+    }
+    /*************************表格******************************/ 
+    .el-table::before{
+        display: none;
+    }
+    .el-table__fixed-right-patch{
+        background: #F5F7F9;
+    }
+    .el-table__fixed-body-wrapper{
+        background: white;
+    }
+    .el-table__header-wrapper th , .el-table th , .el-table__header-wrapper{
+        background: #F5F7F9;
+        color: $icon_g;
+        font-size: 12px;
+        line-height: 18px;
+        .cell{
+            line-height: 18px;
+        }
+    }
+    .el-table .caret-wrapper{
+        line-height: 18px !important;
+        height: 18px;
+    }
+    .el-table .sort-caret.ascending{
+        top: -3px;
+    }
+    .el-table .sort-caret.descending{
+        bottom: -2px;
+    }
+    // 有右边框的table
+    .tableTDRB{
+        td{
+            border-right: 1px solid  $gray_f1;
+        }
+        tr>td:nth-last-of-type(1){
+            border-right: none;
+        }
+    }
+    // 分页
+    .el-pagination{
+        text-align: center;
+        float: none;
+        padding-top: 0 !important;
+        margin: 20px auto 30px !important;
+    }
+    // dialog 
+    .re_el_dialog {
+        .el-dialog__body{
+            padding: 50px 44px 40px;
+        }
+    }
+    .el-table td .cell{
+        line-height: 28px;
+    }
+}
+// table body 左右有边距
+.tableF14{
+    .cell{
+        font-size: 14px !important;
+    }
+}
+
+.companyCommon{
+    height: 100%;
+    overflow: hidden;
+    // 表格部分边框
+    // .el-table th.is-leaf, .el-table td{
+    //     border-bottom: 1px solid $gray_f1;
+    // }
+    .el-icon-caret-right:before {
+        content: "\E602";
+    }
+    .el-icon-caret-bottom:before {
+        content: "\E63C";
+    }
+    .el-table th.is-leaf, .el-table td{
+        border-bottom: 1px solid $gray_f1;
+    }
+    .el-table td, .el-table th.is-leaf{
+        border-bottom: 1px solid $gray_f1;
+    }
+    .el-table--border, .el-table--group{
+        border: none !important;
+    }
+    .el-table__header-wrapper{
+        border-top: 1px solid $gray_f1;
+    }
+    .el-table__fixed-header-wrapper{
+        border-top: 1px solid $gray_f1;
+    }
+    .el-form{
+        position: relative;
+    }
+    .el-form-item__content{
+        text-align: left;
+    }
+    .el-range-editor{
+        width: 500px;
+    }
+    .dialogForm{
+        .el-form-item__content{
+            width: 100%;
+        }
+        .el-select{
+            width: 100%;
+        }
+        .el-input{
+            width: 100%;
+        }
+        .el-range-editor{
+            width: 100%;
+        }
+
+        .el-cascader{
+            width: 100%;
+        }
+    }
+    .el-form-item{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .el-form-item__label{
+        text-align: left;
+        position: relative;
+        padding-left: 10px;
+        position: absolute;
+        line-height: 20px !important;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    .formLabelTop{
+        .el-form-item{
+            align-items: flex-start;
+            .el-form-item__label{
+                top: 18px;
+            }
+        }
+    }
+    .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+        color: $base_blue;
+    }
+    .formInline{  
+        .el-form-item{
+            display: inline-block;
+            // margin-right: 100px;
+            position: relative;
+        }
+        .el-form-item__label{
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        .el-textarea{
+            max-width: 1270px;
+        }
+    }
+    // 折叠面板箭头
+    .el-collapse-item{
+        position: relative;
+    }
+    .el-collapse-item__arrow{
+        margin-right: 0;
+        position: absolute;
+        right: 0;
+        right: 8px;
+    }
+    .el-scrollbar__wrap{
+        margin-top: 17px;
+    }
+    .el-scrollbar{
+        margin-top: -17px;
+    }
+    .el-cascader{
+        width: 100%;
+    }
+    .pageFooter{
+        margin: 20px auto 30px;
+    }
+    // 详情滚动样式
+    .infoContent{
+        height: calc(100% - 56px);
+        overflow: hidden;
+    }
+    // 列表的头部
+    .listHead{
+        background: $btn_bg;
+        height: 60px;
+        padding-right: 12px;
+        .title{
+            width:96px;
+            font-size:16px;
+            color: $gray_a2;
+            margin-left: 26px;
+            font-weight: bold;
+            line-height: 60px;
+        }
+        button{
+            display: inline-block;
+            height:30px;
+            padding: 0 18px;
+            background:rgba(31,158,251,1);
+            border-radius:3px;
+            font-size:12px;
+            color:rgba(255,255,255,1);
+            margin-left: 10px;
+        }
+        .all{
+            width:80px;
+        }    
+        .search{
+            display: flex;
+            height: 30px;
+            justify-content: flex-end;
+            margin-top: 15px;
+            .search-input{
+                width: 300px;
+                height: 30px;
+            }
+        }
+    }
+    .labelTop .el-form-item__label{
+        top: 8px;
+    }
+}
+.listWrapNoScroll{
+    height: calc(100vh - 114px);
+}
+.pointer{
+    &:hover{
+        cursor: pointer;
+    }
+}
+.safeDialog{
+    .el-dialog__close{
+        display: none;
+    }
+  }
+.safeWrap{
+    .el-input--medium .el-input__inner{
+        height: 40px;
+    }
+}  
+
+.formSelectNoTags{
+    .el-select__tags{
+        opacity: 0;
+    }
+}
+
+//   组织架构选择
+.orgManageSelectTree+.el-select-dropdown__item{
+    display: none;
+}
+.orgManageSelectTree {
+    .el-tree{
+        margin-top: 10px;
+    }
+    .el-radio{
+        display: block;
+    }
+    .el-tree-node__content{
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 7px;
+        padding: 0;
+        border: none;
+    }
+    .el-input__inner{
+        height: 30px;
+        line-height: 30px;
+    }
+    .el-input__icon {
+        line-height: 30px;
+    }
+    .el-icon-circle-close{
+        display: none;
+    }
+}
+// 气泡
+.el-tooltip__popper.is-dark{
+    max-width: 400px;
+    word-break: break-all
+}
+// 稍微大的dialog弹窗
+.largeDialog .el-dialog{
+    width: 80%;
+}
+// 头部面包屑导航
+.topNavName{
+    .el-breadcrumb__separator{
+        margin:  0 11px;
+    }
+    .el-breadcrumb__item:last-child .el-breadcrumb__inner{
+        color: #9aacc0;
+    }
+    .el-breadcrumb__item:first-child .el-breadcrumb__inner{
+        color: #4f5051;
+        font-weight: bold;
+    }
+}
+// 左侧菜单样式
+.menuList{
+    .el-menu-vertical-demo{
+        border-right: none !important;
+    }
+}
+// 滚动条
+.scrollContent{
+    // margin-top: -17px !important;
+    .el-scrollbar__wrap{
+        margin-top: 17px !important;
+        margin-bottom: 0 !important;
+    }
+}
+.tableContentScroll{
+    height: calc(100% - 80px) !important;
+}
+.tableContentScroll100{
+    height: 100% !important;
+}
+
+// 列表表格滚动样式
+.tableContent{
+    width: 100%;
+    height: calc(100% - 60px);
+    background: white;
+}
+
+// 考试系统 发布考试 样式
+.examCheckbox {
+    .el-checkbox__label{
+        font-size:14px;font-weight:400;
+    }
+    .el-table__row:hover>td{
+        background: white !important;
+    }
+    .el-checkbox__input.is-checked + .el-checkbox__label{
+        color: $gray_b;
+    }
+    .labelCheckbox{
+        width: 132px;
+    }
+}
+.initExamWrap{
+    .selectExam{
+        .el-select__tags{
+            display: none !important;
+        }
+    }
+    .el-form-item__content{
+        position: relative;
+    }
+}
+// 考试系统中题目不可选的题目的样式
+.examSubjectWrap{
+    .el-radio__input.is-disabled + span.el-radio__label,.el-checkbox__input.is-disabled + span.el-checkbox__label{
+        color: $gray_b;
+    }
+    .el-radio__label,.el-checkbox__label{
+        white-space: normal;
+        word-break: break-all;
+    }
+    .el-checkbox__input{
+        vertical-align: top;
+    }
+    .options{
+        width: 670px;
+    }
+}
+// 安全验证里面的form
+.safeForm{
+    .el-form-item__content{
+        position: relative;
+    }
+    .el-input__inner{
+        border-radius: 0 !important;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #90aabd;
+        background: rgba(0, 0, 0, 0);
+        color: white;
+    }
+    .padd100{
+        padding-left: 53px;
+    }
+    .el-input-group__prepend{
+        background: rgba(0, 0, 0, 0);
+        border: 1px solid #90aabd;
+        border-right: none;
+        border-left: 0;
+    }
+    .el-input--suffix{
+        line-height: 25px;
+        height: 25px;
+        margin-top: 14px;
+        border-right: 1px solid #4b7595;
+    }
+    .el-input__icon{
+        line-height: 25px;
+    }
+    .el-select .el-input .el-select__caret{
+        line-height: 25px;
+    }
+    .phoneInput{
+        .el-input-group{
+            width: 226px;
+        }
+        .el-input__inner{
+            border-left: none;
+        }
+    }
+    .code{
+        .el-input__inner{
+            padding-right: 90px;
+        }
+    }
+}
+.menuList{
+    .el-icon-setting{
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 16px;
+        margin-right: 0;
+    }
+}
+// 人员多选的样式
+
+.resetMemSelect{
+    .el-tag__close.el-icon-close {
+    background: #c0c4cc;
+    right: 0;
+    top: -1px;
+    color: white;
+    }
+    .el-tag {
+    box-sizing: border-box;
+    border-color: transparent;
+    margin: 2px 0 2px 6px;
+    background-color: #f0f2f5;
+    }
+    .el-tag--small {
+    padding: 0 4px 0 8px;
+    }
+    .mem_select_tag {
+    z-index: 100;
+    max-width: 468px;
+    }
+    .el-form-item__content:hover{
+        .close-icon{
+            display: inline-block;
+        }
+    }
+}
+.dialogForm.resetMemSelect{
+    .mem_select_tag {
+        z-index: 100;
+        max-width: 324px;
+        .el-tag--small {
+        padding: 0 4px 0 4px;
+        }
+    }
+    .close-icon{
+        position: absolute;
+        z-index: 100;
+        right: 10px;
+        display: none;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #c0c4cc;
+    }
+
+}
+#payment{
+    .dialogForm{
+        .el-form-item__content{
+            margin-top: 0 !important;
+            margin-left: 114px !important;
+        }
+    }
+}
+// 考勤汇总部分
+.attendanceWrap{
+    .el-date-editor .el-range-separator,.el-date-editor .el-range__icon,.el-date-editor .el-range__close-icon,.el-input__prefix{
+        line-height: 22px;
+    }
+    .el-date-editor--month{
+        margin-right: 20px;
+        width: 150px !important;
+        input{
+            width: 150px !important;
+            box-sizing: border-box;
+
+        }
+        .el-input__prefix,.el-input__suffix{
+            top: -5px;
+        }
+    }
+    .el-table thead.is-group th{
+        background: #f5f7f9;
+    }
+    .table-border-top{
+        border-left: 1px solid #e4e9ef !important;
+        box-sizing: border-box;
+    }
+    .table-b-l{
+        border-left: 1px solid #e4e9ef !important;
+    }
+    .table-b-r{
+        border-right: 1px solid #e4e9ef !important;
+    }
+    .b-nonebottom{
+        border-bottom: none !important;
+    }
+}
+.attendanceInfowrap{    
+    .table-b-r{
+        border-right: 1px solid #e4e9ef !important;
+    }
+}
+// 考勤规则里面  table 时间选择
+.attendanceRuleWrap{
+    .noBottom.el-form-item {
+        margin-bottom: 0 !important;
+    }
+    .el-form-item__label:before{
+        content: '*';
+        color: #f56c6c;
+        margin-right: 4px;
+    }
+    .companyList{
+        .el-date-editor {
+         border: none;
+         color: $base_blue;
+         width: 150px;
+         display: inline-block;
+         .el-range-input{
+             width: 80px;
+             border: none;
+             color: $base_blue;
+         }
+         .el-input__inner{
+                width: 100px;
+                 border: none;
+                 padding-right: 0;
+                 color: $base_blue;
+            }
+        }
+        td{
+            
+         border-right: 1px solid #ebeef5 !important;
+        }
+        tr>td:nth-last-of-type(1){
+         border-right: none !important;
+     
+        }
+        tr:nth-of-type(1)>td:nth-last-of-type(1){
+         border-bottom: none !important;
+        }
+    }
+    .timePicker{
+        display: inline-block;
+        width: 100px !important;
+    }
+    .daySet{
+        .el-range-editor{
+            width: 500px;
+            margin-right: 20px;
+        }
+        .checkboxs{
+            .el-checkbox,.el-checkbox-group{
+                height: auto;
+                line-height: 1;
+            }
+            .el-checkbox{
+                margin-right: 20px;
+                margin-bottom: 10px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// 邮箱激活中的错误提示 蓝色
+.activatingEmail{
+    .el-form-item__error{
+        color: #00B2FB;
+    }
+    .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus{
+        border-color: #00B2FB;
+    }
+    .el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus{
+        border-color: white;
+    }
+}
+// 审批中的opperbutton
+.opperButton{
+    button{
+        position: relative;
+    }
+    span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+// badge
+.reset_badge_num{
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    margin-left: 5px;
+    .el-badge{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .el-badge__content{
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #E4593E;
+    }   
+}
+// 工作台里的表格
+.benchTable{
+    td{
+        .cell{
+            font-size: 12px;
+            color: $gray_b;
+            line-height: 29px;
+        }
+    }
+    .el-progress-bar__outer{
+        background: white;
+    }
+    .el-progress-bar__inner{
+        background: #4DA1FF;
+    }
+    .bench_fnIcon{
+        .el-dropdown-menu__item{
+            min-width: 100px;
+            text-align: center;
+        }
+    }
+}
+.benchTablePos{
+    tr>th:nth-of-type(1) ,tr>td:nth-of-type(1) {
+        .cell{
+            text-align: left; 
+        }
+    }
+    tr>th:nth-of-type(3) ,tr>td:nth-of-type(3) {
+        text-align: right !important;
+        .cell{
+            text-align: right;
+        }
+        // text-align: right;
+    }
+    tr>td:nth-of-type(3) .cell{
+        width: 55px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+.benchTablePos1{
+    tr>th:nth-of-type(1) ,tr>td:nth-of-type(1) {
+        width: 100px;
+        .cell{
+            text-align: left; 
+        }
+    }
+    tr>th:nth-of-type(3) ,tr>td:nth-of-type(3) {
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        .cell{
+            width: 50px;
+            text-align: center;
+        }
+    }
+    tr>td:nth-of-type(1){
+        .cell{
+            width: 45px;
+            text-align: center;
+        }
+    }
+}
+.benchPointerTr{
+    tr:hover{
+        cursor: pointer;
+    }
+}
+.benchTablePos2{
+    tr>th:nth-of-type(1) ,tr>td:nth-of-type(1) {
+        .cell{
+            text-align: left; 
+        }
+    }
+}
+
+.dropList{
+    span{
+        display: inline-block;
+        width: 100%;
+        line-height: 34px;
+        height: 34px;
+        text-align: center;
+        font-size: 14px;
+        color: $gray_b;
+        font-family:"Microsoft YaHei";
+        font-weight:normal;
+        background: white;
+    }
+    span:hover{
+        color: #1F9EFB;
+        cursor: pointer;
+        font-weight:bold;
+        background: #F5F7FA;
+    }
+}
+.paddingTop_4px{
+    padding: 0;
+    padding-top: 4px;
+}
+.checkbox_no_label{
+    .el-checkbox__label{
+        display: none;
+    }
+}
+// 将图片上传剪裁组件改为只能预览
+.previewCropper{
+    .cropper-move{
+        // display: none;
+        background: rgba(0,0,0,0)
+    }
+    .cropper-crop-box{
+        display: none !important;
+    }
+    .cropper-modal{
+        background: rgba(0, 0, 0, 0) !important;
+    }
+}
+.checkbox_label_type1{
+    .el-dialog__body{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+    .redialogBtns{
+        padding: 13px 0;
+        background: #f5f7fa;
+        border-top: 1px solid #dcdfe6;
+        margin-top: 105px;
+    }
+    .el-checkbox{
+        width: 100%;
+        text-align: right;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 20px;
+    }
+    .el-checkbox:hover{
+        cursor: move;
+    }
+    .is-checked{
+        background: #f5f7f9;
+    }
+
+}

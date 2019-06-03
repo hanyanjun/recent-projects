@@ -1,0 +1,227 @@
+$bg :#f4f4f4;
+$logoBg :#002140;
+$blue_a :#1890ff;
+$base_blue : #10B2FF;
+$blue_b :rgba(16, 178, 255, 1);
+$gray_a : #333333;
+$gray_a2 : #555555;
+$gray_b : #666666;
+$gray_c : #999999;
+$gray_d1 : #CCCCCC;
+$btn_bg : #f9f9f9;
+$gray_f : rgba(249, 249, 249, 1);
+$gray_f1 : #dcdfe6;
+
+//字体灰色
+$fGray : #6f6e6e;
+
+
+$icon_g : #63717F;
+
+$red_c :#E96F6F;
+
+$green_c :#52D99D;
+
+$menuBg :#2E4155;
+
+$blue_a :#1F9EFB;
+
+
+
+
+@media print {
+
+  // *{
+  //     display: none !important;
+  // }
+  #content {
+    overflow: hidden !important;
+  }
+  .previewCoverWrap{
+    margin-top: -30px;
+  }
+  .previewCoverWrap .table {
+    display: inline-block;
+    width: 900px;
+  }
+
+  .previewCoverWrap {
+    overflow: hidden !important;
+  }
+
+  .previewCoverWrap .btns {
+    display: none !important;
+  }
+
+  .previewCoverWrap .close {
+    display: none !important;
+  }
+
+  .previewCoverWrap .content table {
+    width: 100% !important;
+  }
+
+  tr>th:nth-of-type(2) {
+    color: #a3a3a3 !important;
+    font-weight: normal;
+  }
+}
+
+// 文字禁止选中
+.noselect {
+  -webkit-touch-callout: none !important;
+  /* iOS Safari */
+  -webkit-user-select: none !important;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none !important;
+  /* Konqueror */
+  -moz-user-select: none !important;
+  /* Firefox */
+  -ms-user-select: none !important;
+  /* Internet Explorer/Edge */
+  user-select: none !important;
+  /* Non-prefixed version, currently
+    not supported by any browser */
+}
+
+
+
+
+@page {
+  size: auto;
+  /* auto is the initial value */
+  margin: 0mm;
+  /* this affects the margin in the printer settings */
+}
+
+
+
+
+
+
+//loading
+@mixin loading($pWidth:100vw,$pHeight:100vh,$cWidth:1.20rem,$cHeight:1.20rem,$size:0.20rem,$color:$baseBlue,$bg:white){
+    width:$pWidth;
+    height:$pHeight;
+    background: $bg;
+    .spinner {
+      width: $cWidth;
+      height: $cHeight;
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+    .container1>div, .container2>div, .container3>div {
+      width:$size;
+      height: $size;
+      background: $color;
+      border-radius: 50%;
+      position: absolute;
+      -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+      animation: bouncedelay 1.2s infinite ease-in-out;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both
+    }
+    .spinner-container {
+      position: absolute;
+      width: 100%;
+      height: 100%
+    }
+    .container2 {
+      -webkit-transform: rotateZ(45deg);
+      transform: rotateZ(45deg)
+    }
+    .container3 {
+      -webkit-transform: rotateZ(90deg);
+      transform: rotateZ(90deg)
+    }
+    .circle1 {
+      top: 0;
+      left: 0
+    }
+    .circle2 {
+      top: 0;
+      right: 0
+    }
+    .circle3 {
+      right: 0;
+      bottom: 0
+    }
+    .circle4 {
+      left: 0;
+      bottom: 0;
+    }
+    .container2 .circle1 {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s
+    }
+    .reload {
+      display: block;
+      font-size: 28px;
+      padding: 50px;
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      margin-left: -78px;
+      text-align: center
+    }
+    .container3 .circle1 {
+      -webkit-animation-delay: -1s;
+      animation-delay: -1s
+    }
+    .container1 .circle2 {
+      -webkit-animation-delay: -.9s;
+      animation-delay: -.9s
+    }
+    .container2 .circle2 {
+      -webkit-animation-delay: -.8s;
+      animation-delay: -.8s
+    }
+    .container3 .circle2 {
+      -webkit-animation-delay: -.7s;
+      animation-delay: -.7s
+    }
+    .container1 .circle3 {
+      -webkit-animation-delay: -.6s;
+      animation-delay: -.6s
+    }
+    .container2 .circle3 {
+      -webkit-animation-delay: -.5s;
+      animation-delay: -.5s
+    }
+    .container3 .circle3 {
+      -webkit-animation-delay: -.4s;
+      animation-delay: -.4s
+    }
+    .container1 .circle4 {
+      -webkit-animation-delay: -.3s;
+      animation-delay: -.3s
+    }
+    .container2 .circle4 {
+      -webkit-animation-delay: -.2s;
+      animation-delay: -.2s
+    }
+    .container3 .circle4 {
+      -webkit-animation-delay: -.1s;
+      animation-delay: -.1s
+    }
+    @-webkit-keyframes bouncedelay {
+      0%, 100%, 80% {
+        -webkit-transform: scale(0)
+      }
+      40% {
+        -webkit-transform: scale(1)
+      }
+    }
+    @keyframes bouncedelay {
+      0%, 100%, 80% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+      }
+      40% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+      }
+    }
+  }

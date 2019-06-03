@@ -1,0 +1,10 @@
+.wrappTitleImg{
+    width: 100%;
+    animation: move 0.8s;
+    height: 83px;
+    background: rgba(31,158,251,1);
+}
+@keyframes move{
+  0%{width:0px;}
+  100%{width:120px;}
+}
